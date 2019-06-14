@@ -30,7 +30,8 @@
   },
   "homepage": "https://github.com/DimaRGB/text-mask-addon-iban#readme",
   "dependencies": {
-    "iban": "github:DimaRGB/iban.js#structure-blocks"
+    "iban": "github:DimaRGB/iban.js#structure-blocks",
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
