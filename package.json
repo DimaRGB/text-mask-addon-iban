@@ -4,7 +4,7 @@
   "description": "IBAN masks that can be used with Text Mask",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/DimaRGB/text-mask-addon-iban/issues"
   },
-  "homepage": "https://github.com/DimaRGB/text-mask-addon-iban#readme"
+  "homepage": "https://github.com/DimaRGB/text-mask-addon-iban#readme",
+  "dependencies": {
+    "iban": "github:DimaRGB/iban.js#structure-blocks"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
 }
