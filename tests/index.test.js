@@ -1,4 +1,4 @@
-import createIBANMask from '.'
+import createIBANMask from '../src'
 
 describe('createIBANMask', () => {
   it('should create for DE structure F08F10', () => {
