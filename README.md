@@ -1,5 +1,3 @@
-# text-mask-addon-iban
-
 ## install
 ```
 npm i text-mask-addon-iban
