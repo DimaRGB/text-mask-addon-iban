@@ -1,9 +1,9 @@
 # text-mask-addon-iban
 
 ## install
-- `npm i text-mask-addon-iban`
-- or
-- `yarn add text-mask-addon-iban`
+```
+npm i text-mask-addon-iban
+```
 
 ## example ([React](https://github.com/text-mask/text-mask/tree/master/react))
 ```
