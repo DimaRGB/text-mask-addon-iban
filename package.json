@@ -1,6 +1,6 @@
 {
   "name": "text-mask-addon-iban",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "IBAN masks that can be used with Text Mask",
   "files": [
     "dist"
