@@ -1,0 +1,9 @@
+{
+  // Languages
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "numso.prettier-standard-vscode"
+  },
+  // Extensions
+  "eslint.enable": false
+}
