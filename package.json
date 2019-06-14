@@ -2,7 +2,8 @@
   "name": "text-mask-addon-iban",
   "version": "0.0.0",
   "description": "IBAN masks that can be used with Text Mask",
-  "main": "index.js",
+  "main": "dist/text-mask-addon-iban.cjs.js",
+  "module": "dist/text-mask-addon-iban.es.js",
   "scripts": {
     "test": "jest"
   },
@@ -25,6 +26,9 @@
     "iban": "github:DimaRGB/iban.js#structure-blocks"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
     "jest": "^24.8.0"
   }
 }
