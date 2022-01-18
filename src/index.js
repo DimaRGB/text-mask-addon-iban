@@ -19,6 +19,12 @@ const DEFAULT_PRINT_BLOCK_SIZE = 4
 
 export default (country, printBlockSize = DEFAULT_PRINT_BLOCK_SIZE) => {
   const ibanCountrySpecification = IBAN.countries[country]
+
+  // do not fail for unsupported countries: https://github.com/DimaRGB/text-mask-addon-iban/issues/6
+  if (!ibanCountrySpecification) {
+    return;
+  }
+
   const bbanBlocks = ibanCountrySpecification.structureBlocks()
   const internationalPart = country.split('').concat(/[0-9]/, /[0-9]/)
 

@@ -97,4 +97,8 @@ describe('createIBANMask', () => {
       /[0-9A-Za-z]/
     ])
   })
+
+  it('should return undefined for unsupported locale', ()=>{
+    expect(createIBANMask('UNREAL')).toEqual(undefined);
+  })
 })
