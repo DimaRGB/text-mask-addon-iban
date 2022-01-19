@@ -21,7 +21,8 @@
   "keywords": [
     "text-mask",
     "text-mask-addon",
-    "iban"
+    "iban",
+    "ibantools"
   ],
   "author": "Dmytro Lyfarenko <dima.rgb@gmail.com>",
   "license": "Unlicense",
@@ -29,8 +30,8 @@
     "url": "https://github.com/DimaRGB/text-mask-addon-iban/issues"
   },
   "homepage": "https://github.com/DimaRGB/text-mask-addon-iban#readme",
-  "dependencies": {
-    "iban": "github:DimaRGB/iban.js#structure-blocks",
+  "peerDependencies": {
+    "ibantools": "^4.1.3",
     "lodash": "^4.17.11"
   },
   "devDependencies": {

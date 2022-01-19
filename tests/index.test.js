@@ -80,25 +80,26 @@ describe('createIBANMask', () => {
       /[0-9]/,
       /[0-9]/,
       /[0-9]/,
-      /[0-9A-Za-z]/,
+      /[A-Z0-9]/,
       ' ',
-      /[0-9A-Za-z]/,
-      /[0-9A-Za-z]/,
-      /[0-9A-Za-z]/,
-      /[0-9A-Za-z]/,
+      /[A-Z0-9]/,
+      /[A-Z0-9]/,
+      /[A-Z0-9]/,
+      /[A-Z0-9]/,
       ' ',
-      /[0-9A-Za-z]/,
-      /[0-9A-Za-z]/,
-      /[0-9A-Za-z]/,
-      /[0-9A-Za-z]/,
+      /[A-Z0-9]/,
+      /[A-Z0-9]/,
+      /[A-Z0-9]/,
+      /[A-Z0-9]/,
       ' ',
-      /[0-9A-Za-z]/,
-      /[0-9A-Za-z]/,
-      /[0-9A-Za-z]/
+      /[A-Z0-9]/,
+      /[A-Z0-9]/,
+      /[A-Z0-9]/
     ])
   })
 
-  it('should return undefined for unsupported locale', ()=>{
-    expect(createIBANMask('UNREAL')).toEqual(undefined);
+  it('should return undefined for unsupported locale', () => {
+    expect(createIBANMask('UNREAL')).toEqual(undefined)
+    expect(createIBANMask('ZW')).toEqual(undefined)
   })
 })
