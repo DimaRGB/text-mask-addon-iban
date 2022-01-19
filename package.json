@@ -13,7 +13,7 @@
     "test": "jest",
     "build": "babel src -d dist --delete-dir-on-start",
     "prepack": "npm run build",
-    "release": "standard-version && git push && npm publish"
+    "release": "standard-version && git push --follow-tags && npm publish"
   },
   "repository": {
     "type": "git",
