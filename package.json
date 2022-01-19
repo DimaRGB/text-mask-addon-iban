@@ -12,7 +12,8 @@
     "lint:fix": "standard --fix && prettier-standard **/*.js",
     "test": "jest",
     "build": "babel src -d dist --delete-dir-on-start",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "release": "standard-version && git push && npm publish"
   },
   "repository": {
     "type": "git",
@@ -38,11 +39,14 @@
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@commitlint/cli": "^16.0.2",
+    "@commitlint/config-conventional": "^16.0.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "prettier-standard": "^9.1.1",
-    "standard": "^12.0.1"
+    "standard": "^12.0.1",
+    "standard-version": "^9.3.2"
   },
   "standard": {
     "parser": "babel-eslint",
@@ -50,5 +54,23 @@
       "shared-node-browser",
       "jest"
     ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "standard --fix",
+      "prettier-standard"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm test"
+    }
   }
 }
