@@ -3,7 +3,12 @@
 // under: IBAN patterns by country
 
 import { countrySpecs } from 'ibantools'
-import { flow, map, flatten, concat, chunk, drop } from 'lodash/fp'
+import flow from 'lodash/fp/flow'
+import map from 'lodash/fp/map'
+import flatten from 'lodash/fp/flatten'
+import concat from 'lodash/fp/concat'
+import chunk from 'lodash/fp/chunk'
+import drop from 'lodash/fp/drop'
 
 const DEFAULT_PRINT_BLOCK_SIZE = 4
 
